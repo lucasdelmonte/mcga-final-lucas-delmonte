@@ -1,0 +1,25 @@
+.sidebar {
+    padding: 2.1rem;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: .1rem solid $color-primary;
+    &__title {
+        font-family: $GothamMedium;
+        font-size: 1.6rem;
+        color: $color-primary;
+        letter-spacing: 0;
+    }
+    &__button {
+        background: $color-primary 0% 0% no-repeat padding-box;
+        border-radius: 2.5rem;
+        opacity: 1;
+        width: 100%;
+        padding: 1.1rem;
+        font-family: $GothamBold;
+        letter-spacing: 0;
+        color: $color-white;
+    }
+}

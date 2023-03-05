@@ -13,17 +13,15 @@ import { DashboardRoutes } from './DashboardRoutes';
 export const AppRouter = () => {
 	return (
 		<Router>
-			<div>
-				<Switch>
-					<Route path="/auth" component={AuthRouter} />
-					<Route path="/private">
-						<Layout>
-							<DashboardRoutes />
-						</Layout>
-					</Route>
-					<Redirect to="/auth/login" />
-				</Switch>
-			</div>
+			<Switch>
+				<Route path="/auth" component={AuthRouter} />
+				{/*<Route path="/private">*/}
+					<Layout>
+						{/*<DashboardRoutes />*/}
+					</Layout>
+				{/*</Route>*/}
+				<Redirect to="/auth/login" />
+			</Switch>
 		</Router>
 	);
 };

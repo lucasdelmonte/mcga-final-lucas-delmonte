@@ -2,9 +2,9 @@ import React from 'react';
 
 const Section = ({ container }) => {
 	return (
-		<>
-			<div className="containerSection">{container}</div>
-		</>
+		<section>
+			<div>{container}</div>
+		</section>
 	);
 };
 

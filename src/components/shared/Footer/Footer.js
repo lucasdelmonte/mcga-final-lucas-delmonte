@@ -3,8 +3,8 @@ import React from 'react';
 const Footer = (props) => {
 	return (
 		<>
-			<footer className="Footer">
-				<p>Footer</p>
+			<footer class="footer">
+				<h4 class="footer__copyright">Created by Lucas Delmonte</h4>
 			</footer>
 		</>
 	);
