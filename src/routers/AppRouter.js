@@ -1,7 +1,7 @@
 import React from 'react';
 import {
 	BrowserRouter as Router,
-	Redirect,
+	Navigate ,
 	Route,
 	Routes
 } from 'react-router-dom';
@@ -16,7 +16,7 @@ export const AppRouter = () => {
 				<Routes>
 					<Route path="/auth" component={<AuthRouter/>} />
 					<Route exact path="/" component={<MainScreen/>} />
-					<Redirect to="/auth/login" />
+					<Navigate  to="/auth/login" />
 				</Routes>
 			</div>
 		</Router>
