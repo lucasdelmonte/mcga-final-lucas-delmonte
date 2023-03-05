@@ -12,7 +12,7 @@ import { MainScreen } from '../components/main/MainScreen';
 export const AppRouter = () => {
 	return (
 		<Router>
-			<div>
+			<div className='container'>
 				<Switch>
 					<Route path="/auth" component={AuthRouter} />
 					<Route exact path="/" component={MainScreen} />

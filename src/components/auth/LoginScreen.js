@@ -2,8 +2,8 @@ import React from 'react';
 
 export const LoginScreen = () => {
 	return (
-		<div>
-			<h1>LoginScreen</h1>
+		<div className='form'>
+			<h1 className='form__title'>Login</h1>
 		</div>
 	);
 };
