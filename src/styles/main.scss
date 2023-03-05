@@ -15,7 +15,17 @@ html {
     grid-template-columns: 18rem repeat(4, 1fr);
     grid-template-rows: auto 1fr 7rem;
     gap: 0;
-    height: 100vh
+    height: 100vh;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 // Settings

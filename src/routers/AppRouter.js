@@ -15,11 +15,11 @@ export const AppRouter = () => {
 		<Router>
 			<Switch>
 				<Route path="/auth" component={AuthRouter} />
-				{/*<Route path="/private">*/}
+				<Route path="/private">
 					<Layout>
-						{/*<DashboardRoutes />*/}
+						<DashboardRoutes />
 					</Layout>
-				{/*</Route>*/}
+				</Route>
 				<Redirect to="/auth/login" />
 			</Switch>
 		</Router>
