@@ -5,17 +5,22 @@ import {
 	Route,
 	Switch,
 } from 'react-router-dom';
+import { Layout } from '../components/shared/Layout/Layout';
 
 import { AuthRouter } from './AuthRouter';
-import { MainScreen } from '../components/main/MainScreen';
+import { DashboardRoutes } from './DashboardRoutes';
 
 export const AppRouter = () => {
 	return (
 		<Router>
-			<div className='container'>
+			<div>
 				<Switch>
 					<Route path="/auth" component={AuthRouter} />
-					<Route exact path="/" component={MainScreen} />
+					<Route path="/private">
+						<Layout>
+							<DashboardRoutes />
+						</Layout>
+					</Route>
 					<Redirect to="/auth/login" />
 				</Switch>
 			</div>

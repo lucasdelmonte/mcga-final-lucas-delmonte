@@ -36,9 +36,17 @@
         min-height: 5rem;
         margin-bottom: 2.8rem;
         transition: box-shadow 250ms ease;
+        font-size: 1.6rem;
+        color: $color-gray-light;
+        letter-spacing: 0;
+        padding: 0 2.1rem;
+        font-family: $GothamMedium;
         &:hover {
             box-shadow: .4rem .4rem 0 $color-primary;
             cursor: pointer;
+        }
+        &:focus-visible {
+            outline: none;
         }
     }
     &__container {

@@ -1,9 +1,16 @@
 import React from 'react';
+import { Sidebar } from './Sidebar';
 
 export const MainScreen = () => {
 	return (
-		<div>
-			<h1>Main</h1>
-		</div>
+		<>
+			<div className="main__content">
+				<Sidebar />
+
+				<main>
+					<h1>Main content</h1>
+				</main>
+			</div>
+		</>
 	);
 };
