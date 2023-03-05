@@ -1,9 +1,9 @@
 import React from 'react';
 import {
 	BrowserRouter as Router,
-	Navigate ,
+	Redirect,
 	Route,
-	Routes
+	Switch,
 } from 'react-router-dom';
 
 import { AuthRouter } from './AuthRouter';
@@ -13,11 +13,11 @@ export const AppRouter = () => {
 	return (
 		<Router>
 			<div>
-				<Routes>
-					<Route path="/auth" component={<AuthRouter/>} />
-					<Route exact path="/" component={<MainScreen/>} />
-					<Navigate  to="/auth/login" />
-				</Routes>
+				<Switch>
+					<Route path="/auth" component={AuthRouter} />
+					<Route exact path="/" component={MainScreen} />
+					<Redirect to="/auth/login" />
+				</Switch>
 			</div>
 		</Router>
 	);
