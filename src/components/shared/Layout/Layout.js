@@ -12,9 +12,7 @@ export const Layout = ({ children }) => {
 			<aside className="sidebar">
 				<Sidebar />
 			</aside>
-			<section className="section">
-				<Section container={children} />
-			</section>
+			<Section container={children} />
 			<Footer />
 		</>
 	);

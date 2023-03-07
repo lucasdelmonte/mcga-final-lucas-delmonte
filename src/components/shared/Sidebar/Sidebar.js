@@ -1,23 +1,21 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { startLogout } from '../../../actions/auth';
 
 export const Sidebar = () => {
-	const { name } = useSelector((state) => state.auth);
-
 	const dispatch = useDispatch();
 	const handleLogout = () => {
 		dispatch(startLogout());
 	};
+
 	return (
 		<>
-			<h5 className="sidebar__title">Welcome {name}!</h5>
-			<div>
-				<NavLink to="/private/home" className="linkLight">
+			<div className="sidebar__links">
+				<NavLink to="/private/home" className="sidebar__link">
 					<h3>Home</h3>
 				</NavLink>
-				<NavLink to="/private/products" className="linkLight">
+				<NavLink to="/private/products" className="sidebar__link">
 					<h3>Products</h3>
 				</NavLink>
 			</div>
