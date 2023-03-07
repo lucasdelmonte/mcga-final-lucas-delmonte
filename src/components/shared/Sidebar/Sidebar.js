@@ -12,7 +12,7 @@ export const Sidebar = () => {
 	};
 	return (
 		<>
-			<h5 class="sidebar__title">Welcome {name}!</h5>
+			<h5 className="sidebar__title">Welcome {name}!</h5>
 			<div>
 				<NavLink to="/private/home" className="linkLight">
 					<h3>Home</h3>
@@ -21,7 +21,7 @@ export const Sidebar = () => {
 					<h3>Products</h3>
 				</NavLink>
 			</div>
-			<button class="sidebar__button" onClick={handleLogout}>Logout</button>
+			<button className="sidebar__button" onClick={handleLogout}>Logout</button>
 		</>
 	);
 };

@@ -9,10 +9,10 @@ export const Layout = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<aside class="sidebar">
+			<aside className="sidebar">
 				<Sidebar />
 			</aside>
-			<section class="section">
+			<section className="section">
 				<Section container={children} />
 			</section>
 			<Footer />

@@ -1,5 +1,7 @@
 import { types } from '../types/types';
 import { firebase } from '../firebase/firebase-config';
+import { removeError, setError } from '../actions/ui';
+
 
 export const startLoginEmailPassword = (email, password) => {
 	return (dispatch) => {
@@ -10,7 +12,7 @@ export const startLoginEmailPassword = (email, password) => {
 				dispatch(login(user.uid, user.displayName));
 			})
 			.catch((e) => {
-				console.log(e);
+				dispatch(setError('Incorrect username and/or password'));
 			});
 	};
 };
@@ -25,7 +27,7 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
 				dispatch(login(user.uid, user.displayName));
 			})
 			.catch((e) => {
-				console.log(e);
+				dispatch(setError('Incorrect input'));
 			});
 	};
 };

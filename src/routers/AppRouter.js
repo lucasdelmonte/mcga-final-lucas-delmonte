@@ -11,7 +11,6 @@ import { PublicRoute } from './PublicRoute';
 export const AppRouter = () => {
 	const dispatch = useDispatch();
 
-	const [setChecking] = useState(true);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 	useEffect(() => {
@@ -22,9 +21,8 @@ export const AppRouter = () => {
 			} else {
 				setIsLoggedIn(false);
 			}
-			setChecking(false);
 		});
-	}, [dispatch, setChecking, setIsLoggedIn]);
+	}, [dispatch, setIsLoggedIn]);
 
 	return (
 		<Router>
