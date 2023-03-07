@@ -28,19 +28,17 @@ export const AppRouter = () => {
 
 	return (
 		<Router>
-			<div>
-				<Switch>
-					<PublicRoute isAuthenticated={isLoggedIn} path="/auth" component={AuthRouter} />
+			<Switch>
+				<PublicRoute isAuthenticated={isLoggedIn} path="/auth" component={AuthRouter} />
 
-					<PrivateRoute
-						isAuthenticated={isLoggedIn}
-						path="/private"
-						component={DashboardRoutes}
-					/>
+				<PrivateRoute
+					isAuthenticated={isLoggedIn}
+					path="/private"
+					component={DashboardRoutes}
+				/>
 
-					<Redirect to="/auth/login" />
-				</Switch>
-			</div>
+				<Redirect to="/auth/login" />
+			</Switch>
 		</Router>
 	);
 };
