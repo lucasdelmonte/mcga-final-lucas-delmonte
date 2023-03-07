@@ -25,6 +25,7 @@ export const AppRouter = () => {
 			setChecking(false);
 		});
 	}, [dispatch, setChecking, setIsLoggedIn]);
+
 	return (
 		<Router>
 			<div>
