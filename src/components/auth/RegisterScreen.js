@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import validator from 'validator';
+import { startRegisterWithEmailPasswordName } from '../../actions/auth';
 import { removeError, setError } from '../../actions/ui';
 import { useForm } from '../../hooks/useForm';
 
@@ -21,7 +22,7 @@ export const RegisterScreen = () => {
 	const handleRegister = (e) => {
 		e.preventDefault();
 		if (isFormValid()) {
-			console.log('Formulario correcto');
+			dispatch(startRegisterWithEmailPasswordName(email, password, name));
 		}
 	};
 
@@ -68,19 +69,17 @@ export const RegisterScreen = () => {
 					/>
 					<label className="form__label" for="password">Password</label>
 					<input
-						id="password"
 						type="password"
-						name="password-one"
+						name="password"
 						className="form__input"
 						autoComplete="off"
 						onChange={handleInputChange}
 						value={password}
 					/>
-					<label className="form__label" for="password">Confirm password</label>
+					<label className="form__label" for="password2">Confirm password</label>
 					<input
-						id="passwordTwo"
 						type="password"
-						name="password-two"
+						name="password2"
 						className="form__input"
 						autoComplete="off"
 						onChange={handleInputChange}
