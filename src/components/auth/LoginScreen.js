@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { startLoginEmailPassword } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
@@ -8,6 +8,7 @@ import { removeError, setError } from '../../actions/ui';
 
 export const LoginScreen = () => {
 	const dispatch = useDispatch();
+	const { msgError } = useSelector((state) => state.ui);
 
 	const [formValue, handleInputChange] = useForm({
 		email: 'delmontelucas678@gmail.com',
@@ -68,6 +69,7 @@ export const LoginScreen = () => {
 							Login
 						</button>
 					</div>
+					{msgError && <div className="form__error">{msgError}</div>}
 				</form>
 			</div>
 		</div>
