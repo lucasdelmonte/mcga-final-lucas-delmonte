@@ -13,7 +13,17 @@
     width: calc(100% - 11rem);
     padding: 4rem 3.1rem 4rem 3.1rem;
     row-gap: 4.2rem;
-    
+    &--section {
+        row-gap: 0;
+        padding: 4rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        z-index: 2;
+        max-width: 35rem;
+        max-height: 45rem;
+    }
     &__error {
         font-family: $GothamRoundedBold;
         color: $color-secondary;
@@ -48,6 +58,9 @@
         letter-spacing: 0;
         padding: 0 2.1rem;
         font-family: $GothamMedium;
+        &--section {
+            width: 100%;
+        }
         &:hover {
             box-shadow: .4rem .4rem 0 $color-primary;
             cursor: pointer;
