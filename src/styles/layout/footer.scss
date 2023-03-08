@@ -1,11 +1,15 @@
 .footer {
     grid-column: 1/-1;
-    height: 100%;
     background-color: $color-primary;
     opacity: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 12rem;
+    height: inherit;
+    @media screen and (min-width: 1024px) {
+        height: 100%;
+    }
     &__copyright {
         font-family: $GothamBold;
         font-size: 1.4rem;

@@ -44,20 +44,20 @@ export const Products = () => {
 	};
 	return (
 		<div className="section">
-			<div className="m-3">
-			<Header
-				showProductForm={showForm}
-				setShowProductForm={setShowForm}
-				onAddProduct={handleAddProduct}
-				onEditProduct={handleEditProduct}
-				productToEdit={productToEdit}
-			/>
-			<ProductsList
-				productList={list}
-				onDelete={handleDeleteProduct}
-				onEdit={handleEditClick}
-			/>
-		</div>
+			<div>
+				<Header
+					showProductForm={showForm}
+					setShowProductForm={setShowForm}
+					onAddProduct={handleAddProduct}
+					onEditProduct={handleEditProduct}
+					productToEdit={productToEdit}
+				/>
+				<ProductsList
+					productList={list}
+					onDelete={handleDeleteProduct}
+					onEdit={handleEditClick}
+				/>
+			</div>
 		</div>
 	);
 };

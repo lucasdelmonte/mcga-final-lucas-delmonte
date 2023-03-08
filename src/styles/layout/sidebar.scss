@@ -2,10 +2,13 @@
     padding: 2.1rem;
     grid-column: 1/2;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border-right: .1rem solid $color-primary;
+    gap: 1rem;
+    @media screen and (min-width: 1024px) {
+        flex-direction: column;
+    }
     &__title {
         font-family: $GothamMedium;
         font-size: 1.6rem;
@@ -25,10 +28,13 @@
     &__links {
         width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 3rem;
+        gap: 1.5rem;
+        @media screen and (min-width: 1024px) {
+            gap: 3rem;
+            flex-direction: column;
+        }
     }
     &__link {
         font-family: $GothamMedium;

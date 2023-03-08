@@ -12,10 +12,14 @@ html {
 
 #root {
     display: grid;
-    grid-template-columns: 18rem repeat(4, 1fr);
-    grid-template-rows: auto 1fr 7rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
     gap: 0;
     height: 100vh;
+    @media screen and (min-width: 1024px) {
+        grid-template-rows: auto 1fr 7rem;
+        grid-template-columns: 18rem repeat(4, 1fr);
+    }
 
     .container {
         width: 100%;
