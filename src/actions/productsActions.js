@@ -56,7 +56,6 @@ export const addAsyncCreator = (product) => {
 				`https://abm-heroku.vercel.app/api/products`,
 				product
 			);
-			console.log(response);
 			if (response.status === 201) {
 				const action = creatorAddProduct(response.data.dato);
 				dispatch(action);
@@ -68,12 +67,10 @@ export const addAsyncCreator = (product) => {
 export const editAsyncCreator = (product) => {
 	return async (dispatch) => {
 		try {
-			console.log(product)
 			const response = await axios.put(
 				`https://abm-heroku.vercel.app/api/products/${product.id}`,
 				product
 			);
-			console.log(response.data)
 			if (response.status === 200) {
 				const action = creatorEditProduct(response.data);
 				dispatch(action);
