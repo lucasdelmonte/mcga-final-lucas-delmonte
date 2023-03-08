@@ -42,7 +42,6 @@ export const deleteAsyncCreator = (productId) => {
 			const response = await axios.delete(
 				`${process.env.REACT_APP_BACKEND_URL_PORT}/api/products/${productId}`
 			);
-			console.log(response);
 			if (response.status === 202) {
 				const action = creatorRemoveProduct(productId);
 				dispatch(action);
