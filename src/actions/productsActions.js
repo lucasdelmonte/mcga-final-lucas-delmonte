@@ -40,7 +40,7 @@ export const deleteAsyncCreator = (productId) => {
 	return async (dispatch) => {
 		try {
 			const response = await axios.delete(
-				`${process.env.REACT_APP_BACKEND_URL_PORT}/api/products/${productId}`
+				`https://abm-heroku.vercel.app/api/products/${productId}`
 			);
 			if (response.status === 202) {
 				const action = creatorRemoveProduct(productId);
@@ -53,7 +53,7 @@ export const addAsyncCreator = (product) => {
 	return async (dispatch) => {
 		try {
 			const response = await axios.post(
-				`${process.env.REACT_APP_BACKEND_URL_PORT}/api/products`,
+				`https://abm-heroku.vercel.app/api/products`,
 				product
 			);
 			console.log(response);
@@ -70,7 +70,7 @@ export const editAsyncCreator = (product) => {
 		try {
 			console.log(product)
 			const response = await axios.put(
-				`${process.env.REACT_APP_BACKEND_URL_PORT}/api/products/${product.id}`,
+				`https://abm-heroku.vercel.app/api/products/${product.id}`,
 				product
 			);
 			console.log(response.data)
@@ -85,7 +85,7 @@ export const getProductsAsyncCreator = () => {
 	return async (dispatch) => {
 		try {
 			const response = await axios.get(
-				`${process.env.REACT_APP_BACKEND_URL_PORT}/api/products/all`
+				`https://abm-heroku.vercel.app/api/products/all`
 			);
 			if (response.status === 200) {
 				const action = getProducts(response.data.data);
