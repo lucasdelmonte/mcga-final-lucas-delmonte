@@ -12,7 +12,7 @@ export const Header = (props) => {
   } = props;
   return (
     <div>
-      <h1 class="section__title">Products</h1>
+      <h1 className="section__title">Products</h1>
       <button
         className="section__button section__button--absolute"
         onClick={() =>
