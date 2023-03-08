@@ -18,11 +18,11 @@ export const ProductItem = (props) => {
 			<td>{productToShow.price}</td>
 			<td>{productToShow.brand}</td>
 			<td>
-                <button onClick={() => onEdit(productToShow)}>
-                    L
+                <button className="form__button form__button--edit" onClick={() => onEdit(productToShow)}>
+                    Edit
                 </button>
-                <button onClick={handleDelete} >
-                    -
+                <button className="form__button form__button--delete" onClick={handleDelete} >
+                    Delete
                 </button>
 			</td>
 		</tr>

@@ -10,10 +10,6 @@ export const ProductForm = (props) => {
 	const [price, setPrice] = useState(product ? product.price : '');
 	const [brand, setBrand] = useState(product ? product.brand : '');
 
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
-
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		if (type === 'add') {
@@ -29,7 +25,7 @@ export const ProductForm = (props) => {
 				price,
 				brand,
 			};
-			const action = editAsyncCreator(payloadProduct.id);
+			const action = editAsyncCreator(payloadProduct);
 			dispatch(action);
 		}
 		setName('');
@@ -80,7 +76,7 @@ export const ProductForm = (props) => {
 					onChange={(e) => setBrand(e.target.value)}
 					value={brand}
 				/>
-				<button type="submit">
+				<button className="form__button" type="submit">
 					Confirm
 				</button>
 			</form>

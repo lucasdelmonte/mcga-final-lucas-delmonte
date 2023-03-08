@@ -40,7 +40,7 @@ export const deleteAsyncCreator = (productId) => {
 	return async (dispatch) => {
 		try {
 			const response = await axios.delete(
-				`${process.env.REACT_APP_BACKEND_URL_PORT}/api/products/${productId}`
+				`http://localhost:4017/api/products/${productId}`
 			);
 			console.log(response);
 			if (response.status === 202) {
@@ -54,7 +54,7 @@ export const addAsyncCreator = (product) => {
 	return async (dispatch) => {
 		try {
 			const response = await axios.post(
-				'${process.env.REACT_APP_BACKEND_URL_PORT}/api/products',
+				'http://localhost:4017/api/products',
 				product
 			);
 			console.log(response);
@@ -66,15 +66,17 @@ export const addAsyncCreator = (product) => {
 	};
 };
 
-export const editAsyncCreator = (productId) => {
+export const editAsyncCreator = (product) => {
 	return async (dispatch) => {
 		try {
+			console.log(product)
 			const response = await axios.put(
-				`${process.env.REACT_APP_BACKEND_URL_PORT}/api/products/${productId}`
+				`http://localhost:4017/api/products/${product.id}`,
+				product
 			);
-			console.log(response);
+			console.log(response.data)
 			if (response.status === 200) {
-				const action = creatorEditProduct(response.data.update);
+				const action = creatorEditProduct(response.data);
 				dispatch(action);
 			}
 		} catch (error) {}
@@ -84,9 +86,8 @@ export const getProductsAsyncCreator = () => {
 	return async (dispatch) => {
 		try {
 			const response = await axios.get(
-				`${process.env.REACT_APP_BACKEND_URL_PORT}/api/products/all`
+				`http://localhost:4017/api/products/all`
 			);
-			console.log(response);
 			if (response.status === 200) {
 				const action = getProducts(response.data.data);
 				dispatch(action);

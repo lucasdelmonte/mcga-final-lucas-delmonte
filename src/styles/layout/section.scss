@@ -47,5 +47,27 @@ section {
             outline: none;
         }
     }
-
+    &__table {
+        width: 100%;
+        background: $color-blue-light 0% 0% no-repeat padding-box;
+        box-shadow: .25rem .25rem 0 $color-primary;
+        border: .1rem solid $color-primary;
+        border-radius: 2rem;
+        height: 100%;
+        padding: 2rem;
+        font-family: $GothamBold;
+        tr {
+            font-size: 1.4rem;
+            color: $color-primary;
+            letter-spacing: 0;
+            padding: 2rem 1rem;
+        }
+        td {
+            font-size: 1.2rem;
+            color: $color-black;
+            letter-spacing: 0;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+    }
 }

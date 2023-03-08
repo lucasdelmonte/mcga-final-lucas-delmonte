@@ -1,6 +1,6 @@
 import { types } from '../types/types';
 import { firebase } from '../firebase/firebase-config';
-import { removeError, setError } from '../actions/ui';
+import { setError } from '../actions/ui';
 
 
 export const startLoginEmailPassword = (email, password) => {
