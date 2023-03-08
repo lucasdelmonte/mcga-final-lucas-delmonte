@@ -2,7 +2,7 @@
 
 ## Description
 
-Rest API creation
+React ABM using react-dom, react-redux, react-router-dom as main technologies
 
 ### Instructions
 
